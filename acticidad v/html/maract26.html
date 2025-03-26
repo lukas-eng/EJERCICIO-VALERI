@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulario</title>
+    <link rel="stylesheet" href="/css/act.css">
+    <script src="/js/yuca"></script>
+    <script>
+		function mostrarOcultarFormulario() {
+			var formulario = document.getElementById("formulario");
+			if (formulario.style.display === "none") {
+				formulario.style.display = "block";
+				document.getElementById("boton").innerHTML = "Ocultar Formulario";
+			} else {
+				formulario.style.display = "none";
+				document.getElementById("boton").innerHTML = "Mostrar Formulario";
+			}
+		}
+	</script>
+	
+</head>
+<body>
+	  <button id="boton" onclick="mostrarOcultarFormulario()">Mostrar/Ocultar Formulario</button>
+	<div id="formulario" style="display: none;">
+      
+		<h2>LUCERO SHOP</h2>
+		<form>
+			<input type="text" name="nombre" placeholder="Nombre">
+			<input type="email" name="email" placeholder="Email">
+			<input type="submit" value="Enviar">
+		</form>
+	</div>
+
+	
+</body>
+</html>
